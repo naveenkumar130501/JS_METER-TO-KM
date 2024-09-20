@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERT METER INTO KM </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="reg">
+        <div class="tit"><h1>Meter/sec into KM/hr </h1></div>
+        <div>
+            <input type="text" id="text" name="text" placeholder="enter the number">
+        </div>
+        <div class="sub">
+            <button type="submit" onclick="convert()">convert</button>
+        </div>
+        <div id="result"></div>
+        <script>
+            function convert(){
+                const inp=Number(document.getElementById("text").value)
+                const con=inp*(5/18)
+                const final=document.getElementById("result")
+                final.innerHTML=con.toFixed(2)+"km per hour"
+            }   
+            </script>
+    </div>
+</body>
+</html>
